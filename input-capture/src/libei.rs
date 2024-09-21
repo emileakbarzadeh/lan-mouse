@@ -502,10 +502,10 @@ async fn release_capture<'a>(
         .unwrap(); // FIXME
     let (dx, dy) = match pos {
         // offset cursor position to not enter again immediately
-        Position::Left => (1., 0.),
-        Position::Right => (-1., 0.),
-        Position::Top => (0., 1.),
-        Position::Bottom => (0., -1.),
+        Position::Left => (10., 0.),
+        Position::Right => (-10., 0.),
+        Position::Top => (0., 10.),
+        Position::Bottom => (0., -10.),
     };
     // release 1px to the right of the entered zone
     let cursor_position = (x as f64 + dx, y as f64 + dy);
